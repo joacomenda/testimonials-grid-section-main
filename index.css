@@ -1,0 +1,181 @@
+/*---------------------------------------------------------------------------*/
+/*CSS Reset*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------------------------------------------------------------------*/
+
+/*Layout*/
+
+body
+{
+    font-family: "Barlow Semi Condensed";
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container
+{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 85%;
+    margin: 10vh auto;
+}
+
+.card-container
+{
+    border-radius: 10px;
+    padding: 2em;
+    background-color: var(--backcolor , hsl(263, 55%, 52%));
+}
+
+.card-1
+{
+    --backcolor: hsl(263, 55%, 52%);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.big-quotations
+{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    z-index: -1;
+}
+
+.card-2
+{
+    --backcolor: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.card-3, .card-5
+{
+    --backcolor: hsl(0, 0%, 100%);
+    color:hsl(217, 19%, 35%);
+}
+
+.card-4
+{
+    --backcolor: hsl(219, 29%, 14%);
+    color: white;
+}
+
+.user-info
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.user-image
+{
+    width: 30px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.user-name
+{
+    font-weight: 500;
+}
+
+.graduate
+{
+    opacity: 50%;
+}
+
+.user-name
+{
+    margin-bottom: 0.2em;
+}
+
+.opinion-title
+{
+    margin-bottom: 0.8em;
+}
+
+.opinion-quote p
+{
+    font-size: 0.8125rem;
+    line-height: 1.2rem;
+    opacity: 70%;
+}
+
+/*Typography*/
+
+h4
+{
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+.user-name , .graduate
+{
+    font-size: 0.8125rem;
+}
+
+.opinion-quote p
+{
+    font-size: 0.8125rem;
+    line-height: 1.2rem;
+}
+
+@media(min-width:1000px)
+{
+    .container
+    {
+        width: 50%;
+    }
+}
